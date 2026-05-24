@@ -1,233 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="SplashScreen.png">
-    <title>Privacy Policy - Flip & Decide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/png" href="favicon-512X512.png">
+    <title>Privacy Policy · Flip & Decide | NeuroNova Tech</title>
+    <meta name="description"
+        content="Privacy Policy for Flip & Decide — no personal data collection, local storage only, transparent permissions.">
+
+    <!-- Google Fonts + system-first -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
 
     <style>
+        /* ---------- RESET & GLOBAL (META-STYLE WHITE THEME) ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f8f9fc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* container - matches main hub container style */
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
-        h1 {
-            color: #1e293b;
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 12px;
+        /* header (clean, sticky, minimal border) */
+        .site-header {
+            border-bottom: 1px solid #eef2f6;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(2px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        h2 {
-            color: #1e293b;
-            margin-top: 35px;
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        p, li {
-            color: #475569;
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .last-updated {
+        .app-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #f0f4f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.3px;
+            color: #0a2540;
+        }
+
+        .back-home {
+            font-size: 0.9rem;
+            color: #4a5b6e;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 40px;
+            background: #fafcfc;
+        }
+
+        .back-home:hover {
+            color: #0f2b3d;
+            border-color: #cbd5e1;
+            background: #ffffff;
+        }
+
+        /* MAIN LAYOUT (two column: sidebar + content) professional */
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 64px;
+            padding: 56px 0 96px;
+        }
+
+        /* Sidebar (sticky TOC) */
+        .sidebar-toc {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            border-left: 2px solid #eef2f8;
+            padding-left: 24px;
+        }
+
+        .sidebar-toc h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #6c7a8e;
+            margin-bottom: 24px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .toc-list li a {
+            font-size: 0.9rem;
+            color: #4a5b6e;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            color: #0a2540;
+        }
+
+        /* Main content area — clean, readable, max-width comfort */
+        .policy-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
             background: #eff6ff;
-            padding: 14px;
-            border-left: 5px solid #2563eb;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1e40af;
+            letter-spacing: 0.01em;
+            margin-bottom: 28px;
         }
 
-        .contact-box {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
+        .policy-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0a2540;
+            margin-bottom: 20px;
         }
 
-        ul {
+        .lead {
+            font-size: 1.15rem;
+            color: #3c4b5c;
+            margin-bottom: 32px;
+            border-left: 3px solid #dce5ef;
             padding-left: 20px;
         }
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #64748b;
-            font-size: 14px;
+        .last-updated {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 16px 24px;
+            font-size: 0.85rem;
+            color: #5a6879;
+            border: 1px solid #edf2f7;
+            margin-bottom: 56px;
         }
 
-        strong {
-            color: #0f172a;
+        /* policy sections */
+        .policy-section {
+            margin-bottom: 64px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 24px;
+            color: #0f2b3d;
+            border-bottom: 1px solid #eef2f6;
+            padding-bottom: 12px;
+        }
+
+        .policy-section p {
+            color: #2c3e4e;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .policy-section ul,
+        .policy-section .custom-list {
+            margin: 1.25rem 0 1.5rem 1.5rem;
+            color: #2c3e4e;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.6rem;
+        }
+
+        .badge-permission {
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 2px 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1f3a5f;
+        }
+
+        .contact-card {
+            background: #f9fbfd;
+            border-radius: 24px;
+            border: 1px solid #eef2f8;
+            padding: 32px;
+            margin-top: 24px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .contact-email {
+            background: white;
+            border-radius: 14px;
+            padding: 14px 18px;
+            border: 1px solid #e9edf2;
+            display: inline-block;
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        footer {
+            border-top: 1px solid #eef2f6;
+            padding: 32px 0 48px;
+            background: #ffffff;
+            text-align: center;
+            color: #6c7a8e;
+            font-size: 0.85rem;
+        }
+
+        /* responsiveness */
+        @media (max-width: 900px) {
+            .policy-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .sidebar-toc {
+                position: relative;
+                top: 0;
+                border-left: none;
+                padding-left: 0;
+                border-bottom: 1px solid #eef2f6;
+                padding-bottom: 20px;
+            }
+
+            .toc-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            .policy-content h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .policy-content h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-badge {
+                margin-bottom: 20px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================================
+   HIDE SCROLLBAR BUT KEEP SCROLL WORKING
+========================================= */
+
+        /* Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        /* Firefox */
+        html {
+            scrollbar-width: none;
+        }
+
+        /* IE & old Edge */
+        body {
+            -ms-overflow-style: none;
+        }
+
+        /* Prevent horizontal scrollbar */
+        html,
+        body {
+            overflow-x: hidden;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo-area">
+                    <div class="app-icon">
+                        <img src="SplashScreen.png" alt="Flip & Decide icon">
+                    </div>
+                    <span class="logo-text">Flip & Decide</span>
+                </div>
+                <a href="https://neuronovatech.in/privacy/privacy.html" class="back-home">
+                    ← Back to Privacy Hub
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <h1>Privacy Policy for Flip & Decide</h1>
+    <main>
+        <div class="container">
+            <div class="policy-layout">
+                <!-- Sidebar table of contents (clean, meta-style) -->
+                <aside class="sidebar-toc">
+                    <h4>On this page</h4>
+                    <ul class="toc-list">
+                        <li><a href="#information">Information collection</a></li>
+                        <li><a href="#storage">Local storage</a></li>
+                        <li><a href="#notifications">Notifications</a></li>
+                        <li><a href="#permissions">Permissions</a></li>
+                        <li><a href="#thirdparty">Third‑party services</a></li>
+                        <li><a href="#children">Children’s privacy</a></li>
+                        <li><a href="#security">Data security</a></li>
+                        <li><a href="#rights">Your rights</a></li>
+                        <li><a href="#changes">Policy changes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </aside>
 
-    <div class="last-updated">
-        <strong>Last Updated:</strong> May 21, 2026
-    </div>
+                <!-- Main policy content (professional, legible) -->
+                <div class="policy-content">
+                    <div class="hero-badge">Privacy Policy</div>
+                    <h1>Your privacy is respected,<br>your data stays yours.</h1>
+                    <div class="lead">
+                        Flip & Decide operates entirely on your device. No accounts, no tracking, no servers.
+                    </div>
+                    <div class="last-updated">
+                        📅 Last updated: May 24, 2026<br>
+                        This policy applies to Flip & Decide (Android).
+                    </div>
 
-    <p>
-        Thank you for using <strong>Flip & Decide</strong>.
-        Your privacy is important to us. This Privacy Policy explains how the app handles information and permissions.
-    </p>
+                    <section id="information" class="policy-section">
+                        <h2>1. Information we collect</h2>
+                        <p>Flip & Decide does <strong>not</strong> collect any personal information, email addresses,
+                            device identifiers, or usage analytics. The app does not require registration, login, or
+                            internet-based communication for core functionality.</p>
+                        <p>We believe in total transparency: your decisions, flips, and preferences never leave your
+                            device.</p>
+                    </section>
 
-    <h2>1. Information We Collect</h2>
+                    <section id="storage" class="policy-section">
+                        <h2>2. Local device storage</h2>
+                        <p>To provide a seamless experience, Flip & Decide stores certain preferences locally on your
+                            device. This data is never synced to the cloud or shared externally.</p>
+                        <ul>
+                            <li>📋 Flip history (coin/dice results)</li>
+                            <li>🎲 Custom decision options you create</li>
+                            <li>🌓 Theme preference (light/dark/system)</li>
+                            <li>🔔 Notification reminder settings</li>
+                        </ul>
+                        <p>When you uninstall the app, all locally stored data is automatically removed.</p>
+                    </section>
 
-    <p>
-        <strong>Flip & Decide does not collect any personal information.</strong>
-    </p>
+                    <section id="notifications" class="policy-section">
+                        <h2>3. Notifications (reminders)</h2>
+                        <p>The app may ask for permission to send optional reminder notifications. These notifications
+                            are generated <strong>locally</strong> on your device and never transmit any information to
+                            external servers.</p>
+                        <ul>
+                            <li>✅ No push notification services (like Firebase) are used</li>
+                            <li>✅ You can enable or disable notifications at any time in system settings</li>
+                            <li>✅ Reminders are purely for your convenience — no analytics attached</li>
+                        </ul>
+                    </section>
 
-    <p>
-        The app works primarily offline and does not require user registration, login, or account creation.
-    </p>
+                    <section id="permissions" class="policy-section">
+                        <h2>4. App permissions explained</h2>
+                        <p>Flip & Decide requests only essential permissions, each with a clear purpose:</p>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li><span class="badge-permission">VIBRATE</span> — provides haptic feedback when you flip
+                                or decide.</li>
+                            <li style="margin-top: 12px;"><span class="badge-permission">POST_NOTIFICATIONS</span> —
+                                enables optional reminder notifications (Android 13+).</li>
+                            <li style="margin-top: 12px;"><span class="badge-permission">INTERNET</span> — used only to
+                                load external legal pages like this privacy policy or the payment/refund hub. No user
+                                data is sent over the network.</li>
+                        </ul>
+                        <p>No storage, camera, contacts, or location permissions are required.</p>
+                    </section>
 
-    <h2>2. Local Device Storage</h2>
+                    <section id="thirdparty" class="policy-section">
+                        <h2>5. Third‑party services</h2>
+                        <p>We intentionally avoid third-party trackers, analytics SDKs, and advertising networks. Flip &
+                            Decide does not integrate with:</p>
+                        <ul>
+                            <li>❌ Google Analytics / Firebase Analytics</li>
+                            <li>❌ Crashlytics or performance monitors</li>
+                            <li>❌ Ad mediation or remarketing tools</li>
+                            <li>❌ Social media SDKs (Facebook, TikTok, etc.)</li>
+                        </ul>
+                        <p>Your privacy is not a commodity.</p>
+                    </section>
 
-    <p>
-        The app stores certain information locally on your device to improve user experience, including:
-    </p>
+                    <section id="children" class="policy-section">
+                        <h2>6. Children’s privacy</h2>
+                        <p>Flip & Decide does not collect any personal data from anyone, including children under 13.
+                            Because no information is gathered, the app complies with COPPA and similar child privacy
+                            regulations by design.</p>
+                        <p>Parents and guardians can be confident that no behavioral tracking or data sharing occurs.
+                        </p>
+                    </section>
 
-    <ul>
-        <li>Coin flip history</li>
-        <li>Decision maker options</li>
-        <li>Theme preferences (light/dark mode)</li>
-        <li>Notification settings</li>
-    </ul>
+                    <section id="security" class="policy-section">
+                        <h2>7. Data security</h2>
+                        <ul>
+                            <li>🔒 All data resides locally on your device (internal storage).</li>
+                            <li>☁️ No cloud databases, no remote servers, no data backups.</li>
+                            <li>🧹 Uninstalling the app completely removes all stored history and preferences.</li>
+                            <li>🛡️ No encryption required because no sensitive information ever leaves your device.
+                            </li>
+                        </ul>
+                    </section>
 
-    <p>
-        This data is stored only on your device using local storage technologies such as SharedPreferences.
-        No data is uploaded to external servers.
-    </p>
+                    <section id="rights" class="policy-section">
+                        <h2>8. Your rights & control</h2>
+                        <p>You remain in full control of Flip & Decide at all times:</p>
+                        <ul>
+                            <li>🗑️ Clear flip history and decision lists directly from settings.</li>
+                            <li>🔕 Disable notifications via system settings or in-app toggles.</li>
+                            <li>📱 Uninstall the application whenever you choose — no residual data remains.</li>
+                        </ul>
+                    </section>
 
-    <h2>3. Notifications</h2>
+                    <section id="changes" class="policy-section">
+                        <h2>9. Changes to this policy</h2>
+                        <p>We may update this Privacy Policy occasionally to reflect improvements, legal clarifications,
+                            or feature changes. The latest version will always be available within the app and on the
+                            NeuroNova Tech privacy hub. Updates are effective immediately upon posting.</p>
+                        <p>If we ever make significant changes that affect your rights, we will highlight them via an
+                            in-app notice.</p>
+                    </section>
 
-    <p>
-        The app may send optional local notifications/reminders if enabled by the user.
-    </p>
+                    <section id="contact" class="policy-section">
+                        <h2>10. Contact us</h2>
+                        <div class="contact-card">
+                            <h3>📍 Have questions about privacy?</h3>
+                            <p>We reply within 48 hours. Reach out to our data protection representative:</p>
+                            <div class="contact-email">
+                                ✉️ neuronovatech.playstore@gmail.com
+                            </div>
+                            <p style="margin-top: 20px; font-size: 0.85rem; color:#5a6f84;">NeuroNova Tech — App Privacy
+                                Office</p>
+                        </div>
+                    </section>
 
-    <ul>
-        <li>Notifications are generated locally on your device</li>
-        <li>No personal data is collected or transmitted</li>
-        <li>You can disable notifications anytime in Settings</li>
-    </ul>
-
-    <h2>4. App Permissions</h2>
-
-    <p>
-        Flip & Decide may request the following permissions:
-    </p>
-
-    <ul>
-        <li>
-            <strong>VIBRATE</strong> — Used for haptic feedback during coin flips and interactions.
-        </li>
-
-        <li>
-            <strong>POST_NOTIFICATIONS</strong> — Used to display reminder notifications (Android 13+).
-        </li>
-
-        <li>
-            <strong>INTERNET</strong> — Used only to open external links such as the Privacy Policy page.
-        </li>
-    </ul>
-
-    <h2>5. Third-Party Services</h2>
-
-    <p>
-        Flip & Decide currently does not use third-party analytics or tracking services.
-    </p>
-
-    <p>
-        Specifically, the app does NOT use:
-    </p>
-
-    <ul>
-        <li>Advertising SDKs</li>
-        <li>User tracking systems</li>
-        <li>Analytics platforms</li>
-        <li>Social media integrations</li>
-    </ul>
-
-    <h2>6. Children's Privacy</h2>
-
-    <p>
-        Flip & Decide is safe for users of all ages.
-    </p>
-
-    <p>
-        Since the app does not collect personal information, it complies with child privacy protection requirements.
-    </p>
-
-    <h2>7. Data Security</h2>
-
-    <p>
-        Since all app data stays on your device:
-    </p>
-
-    <ul>
-        <li>Your data remains under your control</li>
-        <li>No cloud storage is used</li>
-        <li>No external database is connected</li>
-        <li>Uninstalling the app removes all stored data</li>
-    </ul>
-
-    <h2>8. Your Rights</h2>
-
-    <p>
-        You have complete control over your app data.
-    </p>
-
-    <ul>
-        <li>You can clear history inside the app</li>
-        <li>You can disable notifications anytime</li>
-        <li>You can uninstall the app to remove all data</li>
-    </ul>
-
-    <h2>9. Changes to This Privacy Policy</h2>
-
-    <p>
-        We may update this Privacy Policy from time to time.
-    </p>
-
-    <p>
-        Any changes will be reflected by updating the "Last Updated" date at the top of this page.
-    </p>
-
-    <div class="contact-box">
-
-        <h2>10. Contact Us</h2>
-
-        <p>
-            If you have any questions or suggestions regarding this Privacy Policy, you may contact us:
-        </p>
-
-        <p>
-            <strong>Email:</strong><br>
-            neuronovatech.playstore@gmail.com
-        </p>
-
-    </div>
+                    <!-- small extra note to align with meta style minimalism -->
+                    <div
+                        style="margin-top: 48px; font-size: 0.75rem; color:#95a5b8; border-top: 1px solid #eef2f6; padding-top: 28px;">
+                        Flip & Decide • designed for privacy by default.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer>
-        © 2026 Flip & Decide. All rights reserved.
+        <div class="container">
+            © 2026 Flip & Decide — a NeuroNova Tech app. All rights reserved.
+        </div>
     </footer>
 
-</div>
+    <!-- optional: smooth anchor scroll respects sticky header offset -->
+    <script>
+        (function () {
+            // Adds smooth scroll with offset for fixed header
+            const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+            document.querySelectorAll('.toc-list a, .policy-section a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (!targetId || targetId === '#') return;
+                    const targetElem = document.querySelector(targetId);
+                    if (targetElem) {
+                        e.preventDefault();
+                        const elementPosition = targetElem.getBoundingClientRect().top + window.scrollY;
+                        const offsetPosition = elementPosition - headerHeight - 16;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+        })();
+    </script>
 
 </body>
+
 </html>
